@@ -1,0 +1,45 @@
+extends ../layout.pug
+
+block prepend styles
+    link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+    div(class='breadcrumb')
+        li= title
+    form(id='soldTicket-add-form' name='soldTicket-add-form' class='form-inline' action='')
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='project') Project
+            div(class='col-md-9')
+                select(id='project' name='project' class='form-control' required='required')
+                    option(value='' selected='selected') Select project
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='performer') Performer
+            div(class='col-md-9')
+                select(id='performer' name='performer' class='form-control' required='required')
+                    option(value='' selected='selected') Select perfomer
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='begin_date') Begin
+            div(class='col-md-9')
+                input(id='begin_date' name='begin_date' value='' class='form-control' type="date")
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='end_date') End
+            div(class='col-md-9')
+                input(id='end_date' name='end_date' value='' class='form-control' type="date")
+        div(class='form-group')
+            div(class='col-md-12')
+                button(type='submit' id='btn-create' class='btn btn-primary') Create
+                button(type='submit' id='btn-update' class='btn btn-primary btn-hidden') Update
+                input(type='hidden' id='update-item' name='update-item')
+        div.list-wrapper
+            table(id='soldTicket-list')
+block append scripts
+    script(src='/static/js/models/performer.js')
+    script(src='/static/js/models/project.js')
+    script(src='/static/js/models/customer.js')
+    script(src='/static/js/models/project_in_progress.js')
+    script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+    script(src='/static/js/views/project_in_progress.js')

@@ -1,0 +1,20 @@
+
+extends ../layout.pug
+
+block content
+  div(class='breadcrumb')
+    div= title
+  div.list-group
+    div.list-group-item
+      span(class='list-icon glyphicon glyphicon-briefcase')
+      a(href='/project') Project
+    div.list-group-item
+      span(class='list-icon glyphicon glyphicon-user')
+      a(href='/customer') Customer  
+    div.list-group-item
+      span(class='list-icon glyphicon glyphicon-ok')
+      a(href='/performer') Performer
+    div.list-group-item
+      span(class='list-icon glyphicon glyphicon-time')
+      a(href='/project_in_progress') ProjectInProgress
+    

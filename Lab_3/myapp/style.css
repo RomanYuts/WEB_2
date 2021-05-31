@@ -1,0 +1,14 @@
+body {
+    background-color: green;
+  } 
+  td {
+    color: black;
+    background-color: darkgray;
+    margin-left: 20px;
+	font-size: 20pt;
+  }
+  div {
+    border-spacing: 10px;
+    background-color: cornsilk;
+    width: fit-content;
+  }
